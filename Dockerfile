@@ -20,10 +20,6 @@ RUN cd /usr/local/src && \
   rm elasticsearch-2.3.4.tar.gz && \
   adduser --system --no-create-home --group elasticsearch && \
   chown -R elasticsearch:elasticsearch elasticsearch-2.3.4 && \
-  wget http://xbib.org/repository/org/xbib/elasticsearch/importer/elasticsearch-jdbc/2.3.4.1/elasticsearch-jdbc-2.3.4.1-dist.zip && \
-  apt-get install -yq unzip && \
-  unzip elasticsearch-jdbc-2.3.4.1-dist.zip && \
-  rm elasticsearch-jdbc-2.3.4.1-dist.zip && \
   sed -i -e "s/#\snetwork.host:\s.*/network.bind_host: 0/g" /usr/local/src/elasticsearch-2.3.4/config/elasticsearch.yml
 
 RUN cd /usr/local/src/elasticsearch-2.3.4/ && \
