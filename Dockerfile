@@ -1,4 +1,4 @@
-# Version 0.0.2
+# Version 0.0.3
 FROM uwinart/base:latest
 
 MAINTAINER Yurii Khmelevskii <y@uwinart.com>
